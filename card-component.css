@@ -26,6 +26,8 @@ main {
 .card {
     padding-top: 5px;
     background-color: #15263F;
+    width: 100%;
+    height: auto;
     max-width: 350px;
     max-height: 596px;
     border-radius: 4%;
@@ -57,6 +59,7 @@ main {
 
 .card .conteudo .image-first {
     width: 100%;
+    height: auto;
     max-width: 302px;
     height: 302px;
     border-radius: 3%;
@@ -83,6 +86,7 @@ span {color:hsl(178, 100%, 50%);}
 .avatar {
     margin:14px 22px;
     border-top: solid 1px #2E405A;
+    width: 100%;
     max-width: 315px;
 }
 
@@ -93,7 +97,8 @@ span {color:hsl(178, 100%, 50%);}
 }
 
 .rodape img {
-    width: 33px;
+    width: 100%;
+    max-width: 33px;
     height: auto;
     margin-right:16px;
     border-radius: 50%;
@@ -135,8 +140,8 @@ h3 {
 }
 
 @media (max-width:375px) {
-    .card {width:327px; height:543px;}
-    .card .conteudo .image-first {width:278px; height: 278px;}
+    .card {width:100%; height: auto; max-width:327px; max-height:543px;}
+    .card .conteudo .image-first {width:100%; height: auto; max-width:278px; max-height: 278px;}
     .rodape {padding: 10px 0;}
     .avatar {margin:0 15px;}
     .conteudo h1 {margin: 10px 15px;}
