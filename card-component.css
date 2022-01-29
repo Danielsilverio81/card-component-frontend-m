@@ -55,7 +55,7 @@ main {
     line-height: 2.5rem;
 }
 
-.image-principal {width:302px; height:302px;}
+.image-principal {width:100%; max-width:301px; height:auto; height:301px;}
 
 .card .conteudo .image-first {
     width: 100%;
@@ -124,7 +124,7 @@ h3 {
 
 /*Media queres*/
 
-@media (max-width:1440px){
+@media (min-width:376px) and (max-width:1440px){
     .conteudo img:hover { cursor: pointer; opacity: 0.3;}
     .image-principal:hover {
         border-radius: 3%;
@@ -141,8 +141,20 @@ h3 {
 
 @media (max-width:375px) {
     .card {width:100%; height: auto; max-width:327px; max-height:543px;}
+    .image-principal {width:100%; height: auto; max-width:278px; max-height: 278px;}
     .card .conteudo .image-first {width:100%; height: auto; max-width:278px; max-height: 278px;}
     .rodape {padding: 10px 0;}
     .avatar {margin:0 15px;}
     .conteudo h1 {margin: 10px 15px;}
+    .conteudo img:hover { cursor: pointer; opacity: 0.3;}
+    .image-principal:hover {
+        border-radius: 3%;
+        background-color: #00FFF8; 
+        background-image: url(assets/icon-view.svg); 
+        background-repeat: no-repeat;
+        background-position:center ;
+        background-size: 20px;
+    }
+    h1:hover {color: hsl(178, 100%, 50%); cursor:pointer}
+    strong:hover {color:hsl(178, 100%, 50%) ; cursor:pointer}
 }
