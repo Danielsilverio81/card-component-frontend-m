@@ -4,3 +4,136 @@
     box-sizing: border-box;
 }
 
+html {font-size: 62.5%;}
+
+body {
+    height:1440px;
+    width:auto;
+    font-family: 'Outfit', sans-serif;
+    background: #F2F2F2;
+    line-height: 2rem;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: #0D192C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    padding-top: 5px;
+    background-color: #15263F;
+    max-width: 350px;
+    max-height: 596px;
+    border-radius: 4%;
+}
+
+.conteudo {
+    padding: 15px 23px;
+    text-align: left; 
+}
+
+.conteudo h1 {
+    padding-right:20px ;
+    margin:25px 0 16px 0;
+    color: #ffff;
+    font-size:2.2rem;
+    font-weight: 600;
+}
+
+.conteudo p {
+    margin: 2px;
+    padding: 5px 0;
+    color: #8BACD9;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2.5rem;
+}
+
+.image-principal {width:302px; height:302px;}
+
+.card .conteudo .image-first {
+    width: 100%;
+    max-width: 302px;
+    height: 302px;
+    border-radius: 3%;
+}
+    
+.img-svg {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+span {color:hsl(178, 100%, 50%);}
+
+.image-description {
+    padding:6px 21px;
+    font-size: 16px;
+    display: flex;
+}
+
+.image-description p {color: #8BACD9;}
+
+.image-description img {padding: 0 5px;}
+
+.avatar {
+    margin:14px 22px;
+    border-top: solid 1px #2E405A;
+    max-width: 315px;
+}
+
+.rodape {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.rodape img {
+    width: 33px;
+    height: auto;
+    margin-right:16px;
+    border-radius: 50%;
+    border: solid 1px #fff;
+}
+
+.rodape h2 {color: rgba(139, 172, 217, 1); letter-spacing: 1px;}
+
+strong {color: hsl(0, 0%, 100%)}
+
+
+footer {
+    display:inline-block;
+    position: absolute;
+    top: 1400px; 
+    left: 20px;
+    font-size: 1.6rem;
+}
+
+/*Media queres*/
+
+@media (max-width:1440px){
+    .conteudo img:hover { cursor: pointer; opacity: 0.3;}
+    .image-principal:hover {
+        border-radius: 3%;
+        background-color: #00FFF8; 
+        background-image: url(assets/icon-view.svg); 
+        background-repeat: no-repeat;
+        background-position:center ;
+        background-size: 60px;
+    }
+    h1:hover {color: hsl(178, 100%, 50%); cursor:pointer}
+    strong:hover {color:hsl(178, 100%, 50%) ; cursor:pointer}
+    
+}
+
+@media (max-width:375px) {
+    .card {width:327px; height:543px;}
+    .card .conteudo .image-first {width:278px; height: 278px;}
+    .rodape {padding: 10px 0;}
+    .avatar {margin:0 15px;}
+    .conteudo h1 {margin: 10px 15px;}
+}
