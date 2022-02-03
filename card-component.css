@@ -33,12 +33,12 @@ main {
     border-radius: 4%;
 }
 
-.conteudo {
+.content {
     padding: 15px 23px;
     text-align: left; 
 }
 
-.conteudo h1 {
+.content h1 {
     padding-right:20px ;
     margin:25px 0 16px 0;
     color: #ffff;
@@ -46,7 +46,7 @@ main {
     font-weight: 600;
 }
 
-.conteudo p {
+.content p {
     margin: 2px;
     padding: 5px 0;
     color: #8BACD9;
@@ -55,14 +55,32 @@ main {
     line-height: 2.5rem;
 }
 
-.image-principal {width:100%; max-width:301px; height:auto; height:301px;}
+.image-main {
+    position: relative;
+    width:100%; 
+    max-width:302px;
+    height:auto; 
+    height:302px;
+    }
 
-.card .conteudo .image-first {
+.card .content .image-first {
     width: 100%;
     height: auto;
     max-width: 302px;
     height: 302px;
     border-radius: 3%;
+}
+
+.when-passing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:302px; 
+    height:302px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
     
 .img-svg {
@@ -90,13 +108,13 @@ span {color:hsl(178, 100%, 50%);}
     max-width: 315px;
 }
 
-.rodape {
+.baseboard {
     padding: 20px 0;
     display: flex;
     align-items: center;
 }
 
-.rodape img {
+.baseboard img {
     width: 100%;
     max-width: 33px;
     height: auto;
@@ -105,7 +123,7 @@ span {color:hsl(178, 100%, 50%);}
     border: solid 1px #fff;
 }
 
-.rodape h2 {color: rgba(139, 172, 217, 1); letter-spacing: 1px;}
+.baseboard h2 {color: rgba(139, 172, 217, 1); letter-spacing: 1px;}
 
 strong {color: hsl(0, 0%, 100%)}
 
@@ -125,15 +143,9 @@ h3 {
 /*Media queres*/
 
 @media (min-width:376px) and (max-width:1440px){
-    .conteudo img:hover { cursor: pointer; opacity: 0.3;}
-    .image-principal:hover {
-        border-radius: 3%;
-        background-color: #00FFF8; 
-        background-image: url(assets/icon-view.svg); 
-        background-repeat: no-repeat;
-        background-position:center ;
-        background-size: 60px;
-    }
+    .content img:hover { cursor: pointer;}
+    .image-main:hover {border-radius: 3%;}
+    .when-passing:hover {opacity: unset; z-index: 1; background-color: #00fff786; border-radius: 4%; }
     h1:hover {color: hsl(178, 100%, 50%); cursor:pointer}
     strong:hover {color:hsl(178, 100%, 50%) ; cursor:pointer}
     
@@ -141,20 +153,18 @@ h3 {
 
 @media (max-width:375px) {
     .card {width:100%; height: auto; max-width:327px; max-height:543px;}
-    .image-principal {width:100%; height: auto; max-width:278px; max-height: 278px;}
-    .card .conteudo .image-first {width:100%; height: auto; max-width:278px; max-height: 278px;}
-    .rodape {padding: 10px 0;}
+    .card .content .image-first {width:100%; height: auto; max-width:278px; max-height: 278px;}
     .avatar {margin:0 15px;}
-    .conteudo h1 {margin: 10px 15px;}
-    .conteudo img:hover { cursor: pointer; opacity: 0.3;}
-    .image-principal:hover {
-        border-radius: 3%;
-        background-color: #00FFF8; 
-        background-image: url(assets/icon-view.svg); 
-        background-repeat: no-repeat;
-        background-position:center ;
-        background-size: 20px;
-    }
+    .content h1 {margin: 10px 15px;}
+    .content img:hover { cursor: pointer;}
+    .when-passing {width:100%; max-width:278px; max-height: 278px;}
+    .when-passing:hover {opacity: unset; z-index: 1; background-color: #00fff786; border-radius: 4%; }
+    .image-main {width:100%; max-width:278px; max-height: 278px;}
+    .image-main:hover {border-radius: 3%; background-color: #00FFF8;}
     h1:hover {color: hsl(178, 100%, 50%); cursor:pointer}
     strong:hover {color:hsl(178, 100%, 50%) ; cursor:pointer}
+}
+
+@media (min-width:320px) and (max-width:344px) {
+    .when-passing,.image-main {width: 100%; max-width: 257px; max-height: 257px;}
 }
